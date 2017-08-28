@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I3L-Qx-veQ">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,23 +9,107 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Grability-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GrabilityTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MovieListViewController" customModule="GrabilityTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-Dk-4es">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fg8-Dk-4es" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="N36-Ka-MAb"/>
+                            <constraint firstAttribute="trailing" secondItem="fg8-Dk-4es" secondAttribute="trailing" id="gfx-PT-ahG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fg8-Dk-4es" secondAttribute="bottom" id="hvl-hq-mdA"/>
+                            <constraint firstItem="fg8-Dk-4es" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iZl-LU-QRP"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Grability" id="bjf-oD-SdH"/>
+                    <connections>
+                        <outlet property="tableView" destination="fg8-Dk-4es" id="apt-AJ-2yU"/>
+                        <segue destination="f78-Ft-EO9" kind="show" id="35A-62-eb7"/>
+                        <segue destination="sXQ-d8-ltR" kind="show" identifier="goToSearchFromList" id="BUp-Vg-3hy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="119"/>
+            <point key="canvasLocation" x="914.49275362318849" y="84.782608695652186"/>
+        </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="FQ8-rJ-Lx6">
+            <objects>
+                <viewController id="f78-Ft-EO9" customClass="MovieDetailsViewController" customModule="GrabilityTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lf1-Ug-FLC"/>
+                        <viewControllerLayoutGuide type="bottom" id="NfG-00-boc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wN8-o6-Zsw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="sXQ-d8-ltR" kind="show" identifier="goToSearchFromDetails" id="4Fr-Bp-V80"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ll8-em-CUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886" y="85"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="JEY-6z-sww">
+            <objects>
+                <viewController id="sXQ-d8-ltR" customClass="SearchViewController" customModule="GrabilityTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oV3-2D-TVs"/>
+                        <viewControllerLayoutGuide type="bottom" id="eYY-Zj-Nju"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NkS-qz-QHi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHI-nN-x2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914" y="881"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AYt-e6-woR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I3L-Qx-veQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N3U-yS-Qjj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rgS-Wz-22k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FN-vP-4oz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.6956521739130448" y="85.59782608695653"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="BUp-Vg-3hy"/>
+    </inferredMetricsTieBreakers>
 </document>
