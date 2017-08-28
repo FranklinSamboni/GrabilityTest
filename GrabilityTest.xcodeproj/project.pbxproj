@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		175F0E1D896F20AFDA9DC713 /* Pods_GrabilityTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5B942C1B58564E2B3EE99E /* Pods_GrabilityTest.framework */; };
+		1BD0412F1F539C5A00EA29F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD0412E1F539C5A00EA29F4 /* AppDelegate.swift */; };
+		1BD041311F539C5A00EA29F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD041301F539C5A00EA29F4 /* ViewController.swift */; };
+		1BD041341F539C5A00EA29F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD041321F539C5A00EA29F4 /* Main.storyboard */; };
+		1BD041361F539C5A00EA29F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BD041351F539C5A00EA29F4 /* Assets.xcassets */; };
+		1BD041391F539C5A00EA29F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD041371F539C5A00EA29F4 /* LaunchScreen.storyboard */; };
+		1BD041441F539C5A00EA29F4 /* GrabilityTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD041431F539C5A00EA29F4 /* GrabilityTestTests.swift */; };
+		1BD0414F1F539C5A00EA29F4 /* GrabilityTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD0414E1F539C5A00EA29F4 /* GrabilityTestUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BD041401F539C5A00EA29F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BD041231F539C5A00EA29F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BD0412A1F539C5A00EA29F4;
+			remoteInfo = GrabilityTest;
+		};
+		1BD0414B1F539C5A00EA29F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BD041231F539C5A00EA29F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BD0412A1F539C5A00EA29F4;
+			remoteInfo = GrabilityTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1BD0412B1F539C5A00EA29F4 /* GrabilityTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrabilityTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD0412E1F539C5A00EA29F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1BD041301F539C5A00EA29F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1BD041331F539C5A00EA29F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1BD041351F539C5A00EA29F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BD041381F539C5A00EA29F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1BD0413A1F539C5A00EA29F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BD0413F1F539C5A00EA29F4 /* GrabilityTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrabilityTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD041431F539C5A00EA29F4 /* GrabilityTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrabilityTestTests.swift; sourceTree = "<group>"; };
+		1BD041451F539C5A00EA29F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BD0414A1F539C5A00EA29F4 /* GrabilityTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrabilityTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD0414E1F539C5A00EA29F4 /* GrabilityTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrabilityTestUITests.swift; sourceTree = "<group>"; };
+		1BD041501F539C5A00EA29F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30914013735BA1D65ADC008C /* Pods-GrabilityTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabilityTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrabilityTest/Pods-GrabilityTest.release.xcconfig"; sourceTree = "<group>"; };
+		663CBCA413DF4C1FB198874E /* Pods_GrabilityTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrabilityTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C857D5743C52DC8C96E02C1 /* Pods-GrabilityTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabilityTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrabilityTest/Pods-GrabilityTest.debug.xcconfig"; sourceTree = "<group>"; };
+		FB5B942C1B58564E2B3EE99E /* Pods_GrabilityTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrabilityTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BD041281F539C5A00EA29F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				175F0E1D896F20AFDA9DC713 /* Pods_GrabilityTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD0413C1F539C5A00EA29F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD041471F539C5A00EA29F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BD041221F539C5A00EA29F4 = {
+			isa = PBXGroup;
+			children = (
+				1BD0412D1F539C5A00EA29F4 /* GrabilityTest */,
+				1BD041421F539C5A00EA29F4 /* GrabilityTestTests */,
+				1BD0414D1F539C5A00EA29F4 /* GrabilityTestUITests */,
+				1BD0412C1F539C5A00EA29F4 /* Products */,
+				9585DBFED16156E9F773B951 /* Pods */,
+				A6F244CD482E19B91F11C5B0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1BD0412C1F539C5A00EA29F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BD0412B1F539C5A00EA29F4 /* GrabilityTest.app */,
+				1BD0413F1F539C5A00EA29F4 /* GrabilityTestTests.xctest */,
+				1BD0414A1F539C5A00EA29F4 /* GrabilityTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BD0412D1F539C5A00EA29F4 /* GrabilityTest */ = {
+			isa = PBXGroup;
+			children = (
+				1BD0415C1F53A0E000EA29F4 /* New Group */,
+				1BD0412E1F539C5A00EA29F4 /* AppDelegate.swift */,
+				1BD041301F539C5A00EA29F4 /* ViewController.swift */,
+				1BD041321F539C5A00EA29F4 /* Main.storyboard */,
+				1BD041351F539C5A00EA29F4 /* Assets.xcassets */,
+				1BD041371F539C5A00EA29F4 /* LaunchScreen.storyboard */,
+				1BD0413A1F539C5A00EA29F4 /* Info.plist */,
+			);
+			path = GrabilityTest;
+			sourceTree = "<group>";
+		};
+		1BD041421F539C5A00EA29F4 /* GrabilityTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				1BD041431F539C5A00EA29F4 /* GrabilityTestTests.swift */,
+				1BD041451F539C5A00EA29F4 /* Info.plist */,
+			);
+			path = GrabilityTestTests;
+			sourceTree = "<group>";
+		};
+		1BD0414D1F539C5A00EA29F4 /* GrabilityTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1BD0414E1F539C5A00EA29F4 /* GrabilityTestUITests.swift */,
+				1BD041501F539C5A00EA29F4 /* Info.plist */,
+			);
+			path = GrabilityTestUITests;
+			sourceTree = "<group>";
+		};
+		1BD0415C1F53A0E000EA29F4 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		9585DBFED16156E9F773B951 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C857D5743C52DC8C96E02C1 /* Pods-GrabilityTest.debug.xcconfig */,
+				30914013735BA1D65ADC008C /* Pods-GrabilityTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A6F244CD482E19B91F11C5B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB5B942C1B58564E2B3EE99E /* Pods_GrabilityTest.framework */,
+				663CBCA413DF4C1FB198874E /* Pods_GrabilityTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BD0412A1F539C5A00EA29F4 /* GrabilityTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BD041531F539C5A00EA29F4 /* Build configuration list for PBXNativeTarget "GrabilityTest" */;
+			buildPhases = (
+				E163460898942E822FCB7190 /* [CP] Check Pods Manifest.lock */,
+				1BD041271F539C5A00EA29F4 /* Sources */,
+				1BD041281F539C5A00EA29F4 /* Frameworks */,
+				1BD041291F539C5A00EA29F4 /* Resources */,
+				0E57A7BB778E647505ED5762 /* [CP] Embed Pods Frameworks */,
+				B55145F3222DDCC8036B3657 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrabilityTest;
+			productName = GrabilityTest;
+			productReference = 1BD0412B1F539C5A00EA29F4 /* GrabilityTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1BD0413E1F539C5A00EA29F4 /* GrabilityTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BD041561F539C5A00EA29F4 /* Build configuration list for PBXNativeTarget "GrabilityTestTests" */;
+			buildPhases = (
+				1BD0413B1F539C5A00EA29F4 /* Sources */,
+				1BD0413C1F539C5A00EA29F4 /* Frameworks */,
+				1BD0413D1F539C5A00EA29F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BD041411F539C5A00EA29F4 /* PBXTargetDependency */,
+			);
+			name = GrabilityTestTests;
+			productName = GrabilityTestTests;
+			productReference = 1BD0413F1F539C5A00EA29F4 /* GrabilityTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1BD041491F539C5A00EA29F4 /* GrabilityTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BD041591F539C5A00EA29F4 /* Build configuration list for PBXNativeTarget "GrabilityTestUITests" */;
+			buildPhases = (
+				1BD041461F539C5A00EA29F4 /* Sources */,
+				1BD041471F539C5A00EA29F4 /* Frameworks */,
+				1BD041481F539C5A00EA29F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BD0414C1F539C5A00EA29F4 /* PBXTargetDependency */,
+			);
+			name = GrabilityTestUITests;
+			productName = GrabilityTestUITests;
+			productReference = 1BD0414A1F539C5A00EA29F4 /* GrabilityTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BD041231F539C5A00EA29F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Franklinsc;
+				TargetAttributes = {
+					1BD0412A1F539C5A00EA29F4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					1BD0413E1F539C5A00EA29F4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1BD0412A1F539C5A00EA29F4;
+					};
+					1BD041491F539C5A00EA29F4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1BD0412A1F539C5A00EA29F4;
+					};
+				};
+			};
+			buildConfigurationList = 1BD041261F539C5A00EA29F4 /* Build configuration list for PBXProject "GrabilityTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1BD041221F539C5A00EA29F4;
+			productRefGroup = 1BD0412C1F539C5A00EA29F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BD0412A1F539C5A00EA29F4 /* GrabilityTest */,
+				1BD0413E1F539C5A00EA29F4 /* GrabilityTestTests */,
+				1BD041491F539C5A00EA29F4 /* GrabilityTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BD041291F539C5A00EA29F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD041391F539C5A00EA29F4 /* LaunchScreen.storyboard in Resources */,
+				1BD041361F539C5A00EA29F4 /* Assets.xcassets in Resources */,
+				1BD041341F539C5A00EA29F4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD0413D1F539C5A00EA29F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD041481F539C5A00EA29F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E57A7BB778E647505ED5762 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GrabilityTest/Pods-GrabilityTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GrabilityTest/Pods-GrabilityTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B55145F3222DDCC8036B3657 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GrabilityTest/Pods-GrabilityTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E163460898942E822FCB7190 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GrabilityTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BD041271F539C5A00EA29F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD041311F539C5A00EA29F4 /* ViewController.swift in Sources */,
+				1BD0412F1F539C5A00EA29F4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD0413B1F539C5A00EA29F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD041441F539C5A00EA29F4 /* GrabilityTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD041461F539C5A00EA29F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD0414F1F539C5A00EA29F4 /* GrabilityTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BD041411F539C5A00EA29F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BD0412A1F539C5A00EA29F4 /* GrabilityTest */;
+			targetProxy = 1BD041401F539C5A00EA29F4 /* PBXContainerItemProxy */;
+		};
+		1BD0414C1F539C5A00EA29F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BD0412A1F539C5A00EA29F4 /* GrabilityTest */;
+			targetProxy = 1BD0414B1F539C5A00EA29F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1BD041321F539C5A00EA29F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BD041331F539C5A00EA29F4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1BD041371F539C5A00EA29F4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BD041381F539C5A00EA29F4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1BD041511F539C5A00EA29F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1BD041521F539C5A00EA29F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1BD041541F539C5A00EA29F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C857D5743C52DC8C96E02C1 /* Pods-GrabilityTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GrabilityTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = franklinsc.GrabilityTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1BD041551F539C5A00EA29F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30914013735BA1D65ADC008C /* Pods-GrabilityTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GrabilityTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = franklinsc.GrabilityTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1BD041571F539C5A00EA29F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GrabilityTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = franklinsc.GrabilityTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrabilityTest.app/GrabilityTest";
+			};
+			name = Debug;
+		};
+		1BD041581F539C5A00EA29F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GrabilityTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = franklinsc.GrabilityTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrabilityTest.app/GrabilityTest";
+			};
+			name = Release;
+		};
+		1BD0415A1F539C5A00EA29F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = GrabilityTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = franklinsc.GrabilityTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GrabilityTest;
+			};
+			name = Debug;
+		};
+		1BD0415B1F539C5A00EA29F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = GrabilityTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = franklinsc.GrabilityTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GrabilityTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BD041261F539C5A00EA29F4 /* Build configuration list for PBXProject "GrabilityTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD041511F539C5A00EA29F4 /* Debug */,
+				1BD041521F539C5A00EA29F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BD041531F539C5A00EA29F4 /* Build configuration list for PBXNativeTarget "GrabilityTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD041541F539C5A00EA29F4 /* Debug */,
+				1BD041551F539C5A00EA29F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1BD041561F539C5A00EA29F4 /* Build configuration list for PBXNativeTarget "GrabilityTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD041571F539C5A00EA29F4 /* Debug */,
+				1BD041581F539C5A00EA29F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1BD041591F539C5A00EA29F4 /* Build configuration list for PBXNativeTarget "GrabilityTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD0415A1F539C5A00EA29F4 /* Debug */,
+				1BD0415B1F539C5A00EA29F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BD041231F539C5A00EA29F4 /* Project object */;
+}
