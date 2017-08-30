@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		175F0E1D896F20AFDA9DC713 /* Pods_GrabilityTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5B942C1B58564E2B3EE99E /* Pods_GrabilityTest.framework */; };
+		1B3406B91F566E4600A71BA7 /* SelectedItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3406B81F566E4600A71BA7 /* SelectedItemProtocol.swift */; };
+		1B3406BB1F5680D500A71BA7 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3406BA1F5680D500A71BA7 /* SearchPresenter.swift */; };
 		1B68CD081F546C9C0092597C /* InitialMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B68CD061F546C9C0092597C /* InitialMovieCell.swift */; };
 		1B68CD091F546C9C0092597C /* InitialMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B68CD071F546C9C0092597C /* InitialMovieCell.xib */; };
 		1B68CD0C1F546DAD0092597C /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B68CD0A1F546DAD0092597C /* CategoryCell.swift */; };
@@ -27,6 +29,9 @@
 		1BD041391F539C5A00EA29F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD041371F539C5A00EA29F4 /* LaunchScreen.storyboard */; };
 		1BD041441F539C5A00EA29F4 /* GrabilityTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD041431F539C5A00EA29F4 /* GrabilityTestTests.swift */; };
 		1BD0414F1F539C5A00EA29F4 /* GrabilityTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD0414E1F539C5A00EA29F4 /* GrabilityTestUITests.swift */; };
+		1BE1251D1F55ED660015F367 /* MovieDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1251C1F55ED660015F367 /* MovieDao.swift */; };
+		1BE1251F1F5606160015F367 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1251E1F5606160015F367 /* MovieList.swift */; };
+		1BE125211F5608380015F367 /* MovieType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE125201F5608380015F367 /* MovieType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B3406B81F566E4600A71BA7 /* SelectedItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedItemProtocol.swift; sourceTree = "<group>"; };
+		1B3406BA1F5680D500A71BA7 /* SearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		1B68CD061F546C9C0092597C /* InitialMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialMovieCell.swift; sourceTree = "<group>"; };
 		1B68CD071F546C9C0092597C /* InitialMovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InitialMovieCell.xib; sourceTree = "<group>"; };
 		1B68CD0A1F546DAD0092597C /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
@@ -72,6 +79,9 @@
 		1BD0414A1F539C5A00EA29F4 /* GrabilityTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrabilityTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD0414E1F539C5A00EA29F4 /* GrabilityTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrabilityTestUITests.swift; sourceTree = "<group>"; };
 		1BD041501F539C5A00EA29F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BE1251C1F55ED660015F367 /* MovieDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDao.swift; sourceTree = "<group>"; };
+		1BE1251E1F5606160015F367 /* MovieList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		1BE125201F5608380015F367 /* MovieType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieType.swift; sourceTree = "<group>"; };
 		30914013735BA1D65ADC008C /* Pods-GrabilityTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabilityTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrabilityTest/Pods-GrabilityTest.release.xcconfig"; sourceTree = "<group>"; };
 		663CBCA413DF4C1FB198874E /* Pods_GrabilityTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrabilityTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C857D5743C52DC8C96E02C1 /* Pods-GrabilityTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabilityTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrabilityTest/Pods-GrabilityTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,19 +114,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B68CD021F546A2C0092597C /* MovieDetails */ = {
-			isa = PBXGroup;
-			children = (
-				1B94AE5B1F54764A0058CD1F /* MovieDetailsViewController.swift */,
-			);
-			name = MovieDetails;
-			sourceTree = "<group>";
-		};
 		1B68CD031F546A550092597C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				1B94AE641F54A3E10058CD1F /* Movie.swift */,
+				1BE125201F5608380015F367 /* MovieType.swift */,
 				1B94AE661F54BBB90058CD1F /* Category.swift */,
+				1BE1251E1F5606160015F367 /* MovieList.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -132,6 +136,7 @@
 		1B68CD051F546A6A0092597C /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				1BE1251C1F55ED660015F367 /* MovieDao.swift */,
 			);
 			name = Persistence;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				1B94AE5E1F5476A80058CD1F /* SearchViewController.swift */,
+				1B3406BA1F5680D500A71BA7 /* SearchPresenter.swift */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 		1B94AE6A1F54BF430058CD1F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1B94AE5B1F54764A0058CD1F /* MovieDetailsViewController.swift */,
 				1BD041301F539C5A00EA29F4 /* MovieListViewController.swift */,
 				1B68CD061F546C9C0092597C /* InitialMovieCell.swift */,
 				1B68CD071F546C9C0092597C /* InitialMovieCell.xib */,
@@ -154,6 +161,7 @@
 				1B68CD0B1F546DAD0092597C /* CategoryCell.xib */,
 				1B94AE571F5475100058CD1F /* ImageCell.swift */,
 				1B94AE581F5475100058CD1F /* ImageCell.xib */,
+				1B3406B81F566E4600A71BA7 /* SelectedItemProtocol.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -187,7 +195,6 @@
 				1B68CD041F546A600092597C /* Net */,
 				1B68CD031F546A550092597C /* Models */,
 				1B94AE5D1F54768C0058CD1F /* Search */,
-				1B68CD021F546A2C0092597C /* MovieDetails */,
 				1BD0415C1F53A0E000EA29F4 /* MovieList */,
 				1BD0412E1F539C5A00EA29F4 /* AppDelegate.swift */,
 				1BD041321F539C5A00EA29F4 /* Main.storyboard */,
@@ -387,15 +394,19 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GrabilityTest/Pods-GrabilityTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,12 +459,17 @@
 				1B94AE5F1F5476A80058CD1F /* SearchViewController.swift in Sources */,
 				1B94AE651F54A3E10058CD1F /* Movie.swift in Sources */,
 				1BD041311F539C5A00EA29F4 /* MovieListViewController.swift in Sources */,
+				1BE1251D1F55ED660015F367 /* MovieDao.swift in Sources */,
+				1BE125211F5608380015F367 /* MovieType.swift in Sources */,
 				1B94AE5C1F54764A0058CD1F /* MovieDetailsViewController.swift in Sources */,
 				1BD0412F1F539C5A00EA29F4 /* AppDelegate.swift in Sources */,
 				1B68CD081F546C9C0092597C /* InitialMovieCell.swift in Sources */,
 				1B94AE611F549AD50058CD1F /* TheMovieDBServices.swift in Sources */,
 				1B94AE691F54BE0B0058CD1F /* MovieListPresenter.swift in Sources */,
 				1B68CD0C1F546DAD0092597C /* CategoryCell.swift in Sources */,
+				1BE1251F1F5606160015F367 /* MovieList.swift in Sources */,
+				1B3406BB1F5680D500A71BA7 /* SearchPresenter.swift in Sources */,
+				1B3406B91F566E4600A71BA7 /* SelectedItemProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SearchView: class {
+    
+}
+
 class SearchViewController: UIViewController {
 
     override func viewDidLoad() {

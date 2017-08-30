@@ -7,6 +7,8 @@ target 'GrabilityTest' do
     pod 'Alamofire', '~> 4.4'
     pod 'RxSwift',    '~> 3.0'
     pod 'RxCocoa',    '~> 3.0'
+    pod 'SDWebImage'
+    pod 'SDWebImage/GIF'
 end
 
 

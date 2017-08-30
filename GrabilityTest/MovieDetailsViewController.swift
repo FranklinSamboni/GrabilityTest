@@ -7,29 +7,53 @@
 //
 
 import UIKit
+import SDWebImage
 
-class MovieDetailsViewController: UIViewController {
+protocol MovieDetailsView: class {
+    func showDetails(imagePath:String, title: String, date: String,voteCount: String, voteAverage:String, overview: String)
+}
 
+class MovieDetailsViewController: UIViewController , MovieDetailsView{
+
+    
+    @IBOutlet var movieImage: UIImageView!
+    @IBOutlet var movieTitle: UILabel!
+    @IBOutlet var movieDate: UILabel!
+    @IBOutlet var movieCount: UILabel!
+    
+    @IBOutlet var movieAverage: UILabel!
+    
+    @IBOutlet var overview: UILabel!
+    
+    var data: [String: Int]!
+    var movieListPresenter: MovieListPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        movieListPresenter.addMovieDetailsView(movieDetailsView: self)
+        movieListPresenter.getDetails(cellIdentifier: (data.first?.key)!, item: (data.first?.value)!)
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    func showDetails(imagePath:String, title: String, date: String,voteCount: String, voteAverage:String, overview: String){
 
+        movieImage.sd_setImage(with: URL.init(string: imagePath), completed: { (image, error, sdImageCacheType, url) in
+            if(error != nil){
+                self.movieImage.image  = #imageLiteral(resourceName: "notFoundImage")
+            }
+        })
+        
+        movieTitle.text = title
+        movieDate.text = date
+        movieCount.text = "votes " + voteCount
+        movieAverage.text = "average " + voteAverage
+        self.overview.text = overview
+        
+    }
+    
+    
 }

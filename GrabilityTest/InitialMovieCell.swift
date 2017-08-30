@@ -11,6 +11,7 @@ import UIKit
 class InitialMovieCell: UITableViewCell {
 
     @IBOutlet var movieImage: UIImageView!
+    @IBOutlet var movieName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

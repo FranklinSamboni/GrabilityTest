@@ -8,21 +8,44 @@
 
 import UIKit
 
-protocol MovieListView {
-    //func showMovies(popular)
+protocol MovieListView : class {
+    func showActivityIndicator()
+    func hideActivityIndicator()
+    
+    func showInitialMovie(path: String, title: String)
+    
+    func showPopularMovies(imagePath: [String], categoryTitle: String)
+    func showTopRatedMovies(imagePath: [String], categoryTitle: String)
+    func showUpcomingMovies(imagePath: [String], categoryTitle: String)
+    func showPopularTVSeries(imagePath: [String], categoryTitle: String)
+    func showTopRatedTVSeries(imagePath: [String], categoryTitle: String)
+    
+    func showError(msg: String)
 }
 
-class MovieListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class MovieListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MovieListView, SelectedItemProtocol {
     
     @IBOutlet var tableView: UITableView!
+    
+    var initialMovieCell : InitialMovieCell!
+    var popularMovieCell : CategoryCell!
+    var topRatedMovieCell : CategoryCell!
+    var upcomingMovieCell : CategoryCell!
+    var popularTVSerieCell : CategoryCell!
+    var topRatedTVSerieCell : CategoryCell!
+    
+    var movieListPresenter: MovieListPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        // Do any additional setup after loading the view, typically from a nib.
+        settingTableView()
+        
+        movieListPresenter = MovieListPresenter(theMovieDBServices: TheMovieDBServices(), movieListView: self)
+        
+        movieListPresenter.getMovieLists()
+        movieListPresenter.setupMovieListObservers()
+
     }
     
     override func viewWillLayoutSubviews() {
@@ -31,7 +54,15 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetailsFromList" {
+            let destination = segue.destination as! MovieDetailsViewController
+            destination.data = sender  as! [String : Int]
+            destination.movieListPresenter = movieListPresenter
+        }
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,7 +74,7 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
             return 1
         }
         else{
-            return 3
+            return 5
         }
     }
     
@@ -69,13 +100,126 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if(indexPath.section == 0){
-            let cell = Bundle.main.loadNibNamed("InitialMovieCell", owner: self, options: nil)?.first as! InitialMovieCell
-            return cell
+            return initialMovieCell
         }
         else{
-            let cell = Bundle.main.loadNibNamed("CategoryCell", owner: self, options: nil)?.first as! CategoryCell
-            return cell
+            
+            switch indexPath.row {
+            case 0:
+                return popularMovieCell
+                
+            case 1:
+                return topRatedMovieCell
+                
+            case 2:
+                return upcomingMovieCell
+                
+            case 3:
+                return popularTVSerieCell
+                
+            case 4:
+                return topRatedTVSerieCell
+                
+            default:
+                return UITableViewCell()
+            }
         }
+        
+    }
+    
+    func showActivityIndicator(){
+        
+    }
+    
+    func hideActivityIndicator(){
+        
+    }
+    
+    func showInitialMovie(path: String, title: String){
+        
+        initialMovieCell.movieName.text = title
+        
+        initialMovieCell.movieImage.sd_setImage(with: URL.init(string: path), completed: { (image, error, sdImageCacheType, url) in
+            if(error != nil){
+                self.initialMovieCell.movieImage.image  = #imageLiteral(resourceName: "notFoundImage")
+            }
+        })
+    }
+    
+    func showPopularMovies(imagePath: [String], categoryTitle: String){
+        popularMovieCell.categoryLabel.text = categoryTitle
+        popularMovieCell.movieImages = imagePath
+        popularMovieCell.collectionView.reloadData()
+    }
+    
+    func showTopRatedMovies(imagePath: [String], categoryTitle: String){
+        topRatedMovieCell.categoryLabel.text = categoryTitle
+        topRatedMovieCell.movieImages = imagePath
+        topRatedMovieCell.collectionView.reloadData()
+    }
+    
+    func showUpcomingMovies(imagePath: [String], categoryTitle: String){
+        upcomingMovieCell.categoryLabel.text = categoryTitle
+        upcomingMovieCell.movieImages = imagePath
+        upcomingMovieCell.collectionView.reloadData()
+    }
+    
+    func showPopularTVSeries(imagePath: [String], categoryTitle: String){
+        popularTVSerieCell.categoryLabel.text = categoryTitle
+        popularTVSerieCell.movieImages = imagePath
+        popularTVSerieCell.collectionView.reloadData()
+    }
+    
+    func showTopRatedTVSeries(imagePath: [String], categoryTitle: String){
+        topRatedTVSerieCell.categoryLabel.text = categoryTitle
+        topRatedTVSerieCell.movieImages = imagePath
+        topRatedTVSerieCell.collectionView.reloadData()
+    }
+    
+    func showError(msg: String){
+        let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func selectedItemInCell(cellIdentifier: String, item: Int) {
+        performSegue(withIdentifier: "goToDetailsFromList", sender: [cellIdentifier: item])
+    }
+    
+    private func settingTableView(){
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.isScrollEnabled = true
+        
+       
+        let initialMovieCellNib = UINib(nibName: "InitialMovieCell", bundle: nil)
+        self.tableView.register(initialMovieCellNib, forCellReuseIdentifier: "InitialMovieCell")
+        self.initialMovieCell = self.tableView.dequeueReusableCell(withIdentifier: "InitialMovieCell") as! InitialMovieCell
+        
+        let categoryCellNib = UINib(nibName: "CategoryCell", bundle: nil)
+        self.tableView.register(categoryCellNib, forCellReuseIdentifier: "CategoryCell")
+        
+        self.popularMovieCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
+        self.popularMovieCell.cellIdentifier = "popularMovieCell"
+        self.popularMovieCell.selectedItem = self
+        
+        self.topRatedMovieCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
+        self.topRatedMovieCell.cellIdentifier = "topRatedMovieCell"
+        self.topRatedMovieCell.selectedItem = self
+        
+        self.upcomingMovieCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
+        self.upcomingMovieCell.cellIdentifier = "upcomingMovieCell"
+        self.upcomingMovieCell.selectedItem = self
+    
+        self.popularTVSerieCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
+        self.popularTVSerieCell.cellIdentifier = "popularTVSerieCell"
+        self.popularTVSerieCell.selectedItem = self
+
+        self.topRatedTVSerieCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
+        self.topRatedTVSerieCell.cellIdentifier = "topRatedTVSerieCell"
+        self.topRatedTVSerieCell.selectedItem = self
+        
         
     }
     
