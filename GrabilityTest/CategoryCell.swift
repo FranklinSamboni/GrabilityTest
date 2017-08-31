@@ -15,9 +15,9 @@ class CategoryCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
     
-    var movieImages: [String] = [String]()
+    var movies: [MovieView] = [MovieView]()
     
-    var cellIdentifier: String!
+    //var cellIdentifier: String!
     var selectedItem: SelectedItemProtocol!
     
     override func awakeFromNib() {
@@ -43,14 +43,14 @@ class CategoryCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movieImages.count
+        return movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath as IndexPath) as! ImageCell
         
-        cell.movieImage.sd_setImage(with: URL.init(string: movieImages[indexPath.row]), completed: { (image, error, sdImageCacheType, url) in
+        cell.movieImage.sd_setImage(with: URL.init(string: movies[indexPath.row].posterPath), completed: { (image, error, sdImageCacheType, url) in
             if(error != nil){
                 cell.movieImage.image  = #imageLiteral(resourceName: "notFoundImage")
             }
@@ -61,7 +61,7 @@ class CategoryCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        selectedItem.selectedItemInCell(cellIdentifier: cellIdentifier, item: indexPath.row)
+        selectedItem.selectedItemInCell(movieView: movies[indexPath.row])
         
     }
     

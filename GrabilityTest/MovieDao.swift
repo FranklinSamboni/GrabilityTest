@@ -227,18 +227,18 @@ class MovieDao {
 
             
         var movie:Movie =  Movie()
-        movie.id = item[0] as! Int
+        movie.id = Int(item[0] as! Int64)
         movie.title = item[1] as! String
         movie.date = item[2] as! String
         movie.overview = item[3] as! String
-        movie.voteCount = item[4] as! Int
-        movie.voteAverage = item[5] as! Float
+        movie.voteCount = Int(item[4] as! Int64)
+        movie.voteAverage = Float(item[5] as! Double)
             
         movie.posterPath = item[6] as! String
         movie.backdropPath = item[7] as! String
             
-        movie.category = item[8] as! Category
-        movie.movieType = item[9] as! MovieType
+        movie.category = Category.fromNumber(number: Int(item[8] as! Int64))
+        movie.movieType = MovieType.fromNumber(number: Int(item[9] as! Int64))
             
         return movie
             

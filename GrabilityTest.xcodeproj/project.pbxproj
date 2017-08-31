@@ -144,7 +144,7 @@
 		1B94AE5D1F54768C0058CD1F /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				1B94AE5E1F5476A80058CD1F /* SearchViewController.swift */,
+				1BE407511F57122400D6F90E /* UI */,
 				1B3406BA1F5680D500A71BA7 /* SearchPresenter.swift */,
 			);
 			name = Search;
@@ -230,6 +230,14 @@
 				1B94AE681F54BE0B0058CD1F /* MovieListPresenter.swift */,
 			);
 			name = MovieList;
+			sourceTree = "<group>";
+		};
+		1BE407511F57122400D6F90E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1B94AE5E1F5476A80058CD1F /* SearchViewController.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		9585DBFED16156E9F773B951 /* Pods */ = {

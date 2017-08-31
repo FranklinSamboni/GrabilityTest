@@ -9,11 +9,8 @@
 import UIKit
 import SDWebImage
 
-protocol MovieDetailsView: class {
-    func showDetails(imagePath:String, title: String, date: String,voteCount: String, voteAverage:String, overview: String)
-}
 
-class MovieDetailsViewController: UIViewController , MovieDetailsView{
+class MovieDetailsViewController: UIViewController{
 
     
     @IBOutlet var movieImage: UIImageView!
@@ -25,13 +22,12 @@ class MovieDetailsViewController: UIViewController , MovieDetailsView{
     
     @IBOutlet var overview: UILabel!
     
-    var data: [String: Int]!
-    var movieListPresenter: MovieListPresenter!
+    var movie: MovieView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        movieListPresenter.addMovieDetailsView(movieDetailsView: self)
-        movieListPresenter.getDetails(cellIdentifier: (data.first?.key)!, item: (data.first?.value)!)
+        showDetails()
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,19 +35,19 @@ class MovieDetailsViewController: UIViewController , MovieDetailsView{
 
     }
     
-    func showDetails(imagePath:String, title: String, date: String,voteCount: String, voteAverage:String, overview: String){
+    func showDetails(){
 
-        movieImage.sd_setImage(with: URL.init(string: imagePath), completed: { (image, error, sdImageCacheType, url) in
+        movieImage.sd_setImage(with: URL.init(string: movie.posterPath), completed: { (image, error, sdImageCacheType, url) in
             if(error != nil){
                 self.movieImage.image  = #imageLiteral(resourceName: "notFoundImage")
             }
         })
         
-        movieTitle.text = title
-        movieDate.text = date
-        movieCount.text = "votes " + voteCount
-        movieAverage.text = "average " + voteAverage
-        self.overview.text = overview
+        movieTitle.text = movie.title
+        movieDate.text = movie.date
+        movieCount.text = "votes " + movie.votes
+        movieAverage.text = "average " + movie.average
+        self.overview.text = movie.description
         
     }
     

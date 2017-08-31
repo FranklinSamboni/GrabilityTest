@@ -10,6 +10,6 @@ import Foundation
 
 protocol SelectedItemProtocol {
     
-    func selectedItemInCell(cellIdentifier: String, item: Int)
+    func selectedItemInCell(movieView: MovieView)
     
 }

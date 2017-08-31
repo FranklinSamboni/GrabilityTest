@@ -37,8 +37,8 @@ class TheMovieDBServices {
     
     init() {
         let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 10
-        configuration.timeoutIntervalForResource = 10
+        configuration.timeoutIntervalForRequest = 6
+        configuration.timeoutIntervalForResource = 6
         alamofire = Alamofire.SessionManager(configuration: configuration)
         
         categories = [Category.Popular:URL_POPULAR,
@@ -111,7 +111,11 @@ class TheMovieDBServices {
                     
                     for item in results{
                         
-                        let movie = Movie.getMovieFromJSON(json: item as! NSDictionary)
+                        var movie = Movie.getMovieFromJSON(json: item as! NSDictionary)
+                        
+                        movie.category = Category.Unknow
+                        movie.movieType = MovieType.Unknow
+                        
                         movies.append(movie)
                         
                     }

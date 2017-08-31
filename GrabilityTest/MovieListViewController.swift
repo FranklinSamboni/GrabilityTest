@@ -14,11 +14,11 @@ protocol MovieListView : class {
     
     func showInitialMovie(path: String, title: String)
     
-    func showPopularMovies(imagePath: [String], categoryTitle: String)
-    func showTopRatedMovies(imagePath: [String], categoryTitle: String)
-    func showUpcomingMovies(imagePath: [String], categoryTitle: String)
-    func showPopularTVSeries(imagePath: [String], categoryTitle: String)
-    func showTopRatedTVSeries(imagePath: [String], categoryTitle: String)
+    func showPopularMovies(movies: [MovieView], categoryTitle: String)
+    func showTopRatedMovies(movies: [MovieView], categoryTitle: String)
+    func showUpcomingMovies(movies: [MovieView], categoryTitle: String)
+    func showPopularTVSeries(movies: [MovieView], categoryTitle: String)
+    func showTopRatedTVSeries(movies: [MovieView], categoryTitle: String)
     
     func showError(msg: String)
 }
@@ -34,6 +34,8 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
     var popularTVSerieCell : CategoryCell!
     var topRatedTVSerieCell : CategoryCell!
     
+    var rightBarButtonItem: UIBarButtonItem!
+    
     var movieListPresenter: MovieListPresenter!
     
     override func viewDidLoad() {
@@ -46,6 +48,10 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         movieListPresenter.getMovieLists()
         movieListPresenter.setupMovieListObservers()
 
+        
+        rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .search, target: self, action: #selector(MovieListViewController.handleRightButton))
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+        
     }
     
     override func viewWillLayoutSubviews() {
@@ -60,9 +66,12 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToDetailsFromList" {
             let destination = segue.destination as! MovieDetailsViewController
-            destination.data = sender  as! [String : Int]
-            destination.movieListPresenter = movieListPresenter
+            destination.movie = sender  as! MovieView
         }
+    }
+    
+    func handleRightButton(_ sender: UIBarButtonItem){
+        performSegue(withIdentifier: "goToSearchFromList", sender: nil)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -146,33 +155,33 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         })
     }
     
-    func showPopularMovies(imagePath: [String], categoryTitle: String){
+    func showPopularMovies(movies: [MovieView], categoryTitle: String){
         popularMovieCell.categoryLabel.text = categoryTitle
-        popularMovieCell.movieImages = imagePath
+        popularMovieCell.movies = movies
         popularMovieCell.collectionView.reloadData()
     }
     
-    func showTopRatedMovies(imagePath: [String], categoryTitle: String){
+    func showTopRatedMovies(movies: [MovieView], categoryTitle: String){
         topRatedMovieCell.categoryLabel.text = categoryTitle
-        topRatedMovieCell.movieImages = imagePath
+        topRatedMovieCell.movies = movies
         topRatedMovieCell.collectionView.reloadData()
     }
     
-    func showUpcomingMovies(imagePath: [String], categoryTitle: String){
+    func showUpcomingMovies(movies: [MovieView], categoryTitle: String){
         upcomingMovieCell.categoryLabel.text = categoryTitle
-        upcomingMovieCell.movieImages = imagePath
+        upcomingMovieCell.movies = movies
         upcomingMovieCell.collectionView.reloadData()
     }
     
-    func showPopularTVSeries(imagePath: [String], categoryTitle: String){
+    func showPopularTVSeries(movies: [MovieView], categoryTitle: String){
         popularTVSerieCell.categoryLabel.text = categoryTitle
-        popularTVSerieCell.movieImages = imagePath
+        popularTVSerieCell.movies = movies
         popularTVSerieCell.collectionView.reloadData()
     }
     
-    func showTopRatedTVSeries(imagePath: [String], categoryTitle: String){
+    func showTopRatedTVSeries(movies: [MovieView], categoryTitle: String){
         topRatedTVSerieCell.categoryLabel.text = categoryTitle
-        topRatedTVSerieCell.movieImages = imagePath
+        topRatedTVSerieCell.movies = movies
         topRatedTVSerieCell.collectionView.reloadData()
     }
     
@@ -182,8 +191,8 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         present(alert, animated: true, completion: nil)
     }
     
-    func selectedItemInCell(cellIdentifier: String, item: Int) {
-        performSegue(withIdentifier: "goToDetailsFromList", sender: [cellIdentifier: item])
+    func selectedItemInCell(movieView: MovieView) {
+        performSegue(withIdentifier: "goToDetailsFromList", sender: movieView)
     }
     
     private func settingTableView(){
@@ -201,25 +210,19 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableView.register(categoryCellNib, forCellReuseIdentifier: "CategoryCell")
         
         self.popularMovieCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
-        self.popularMovieCell.cellIdentifier = "popularMovieCell"
         self.popularMovieCell.selectedItem = self
         
         self.topRatedMovieCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
-        self.topRatedMovieCell.cellIdentifier = "topRatedMovieCell"
         self.topRatedMovieCell.selectedItem = self
         
         self.upcomingMovieCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
-        self.upcomingMovieCell.cellIdentifier = "upcomingMovieCell"
         self.upcomingMovieCell.selectedItem = self
     
         self.popularTVSerieCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
-        self.popularTVSerieCell.cellIdentifier = "popularTVSerieCell"
         self.popularTVSerieCell.selectedItem = self
 
         self.topRatedTVSerieCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
-        self.topRatedTVSerieCell.cellIdentifier = "topRatedTVSerieCell"
         self.topRatedTVSerieCell.selectedItem = self
-        
         
     }
     
